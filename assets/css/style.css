@@ -406,6 +406,44 @@ section .container {
   color: #fff;
 }
 
+.column-title h2 {
+    font-size: 14px;
+    font-weight: 500;
+    padding: 0;
+    line-height: 1px;
+    margin: 0 0 20px 0;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #aaaaaa;
+    font-family: "Poppins", sans-serif;
+  }
+
+  /* .column-title h2::after {
+    content: "";
+    width: 20px;
+    height: 1px;
+    display: inline-block;
+    background: #eb614c;
+    margin: 4px 10px;
+  }
+  .column-title h2::before {
+    content: "";
+    width: 20px;
+    height: 1px;
+    display: inline-block;
+    background: #eb614c;
+    margin: 4px 10px;
+  } */
+
+  .column-title p {
+    margin: 0;
+    margin: -15px 0 15px 0;
+    font-size: 36px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-family: "Poppins", sans-serif;
+    color: #fff;
+  }
 /*--------------------------------------------------------------
 # About
 --------------------------------------------------------------*/
@@ -484,16 +522,16 @@ section .container {
 }
 
 /*--------------------------------------------------------------
-# Skills
+# Tech Stack
 --------------------------------------------------------------*/
-.skills .progress {
+.techstack .progress {
   height: 60px;
   display: block;
   background: none;
   border-radius: 0;
 }
 
-.skills .progress .skill {
+.techstack .progress .skill {
   padding: 10px 0;
   margin: 0;
   text-transform: uppercase;
@@ -503,16 +541,16 @@ section .container {
   color: #fff;
 }
 
-.skills .progress .skill .val {
+.techstack .progress .skill .val {
   float: right;
   font-style: normal;
 }
 
-.skills .progress-bar-wrap {
+.techstack .progress-bar-wrap {
   background: rgba(255, 255, 255, 0.2);
 }
 
-.skills .progress-bar {
+.techstack .progress-bar {
   width: 1px;
   height: 10px;
   transition: 0.9s;
