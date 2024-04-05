@@ -378,7 +378,7 @@ section .container {
 }
 
 .section-title h2 {
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 500;
   padding: 0;
   line-height: 1px;
@@ -416,7 +416,7 @@ section .container {
     margin: 0 0 20px 0;
     letter-spacing: 2px;
     text-transform: uppercase;
-    color: #aaaaaa;
+    color: #ff4f4f;
     font-family: "Poppins", sans-serif;
   }
 
