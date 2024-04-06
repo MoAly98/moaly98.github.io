@@ -731,6 +731,84 @@ section .container {
   border: 2px solid #18d26e;
 }
 
+.resume .resume-subitem {
+  padding: 0 0 15px 10px;
+  margin-top: -2px;
+  border-left: 2px solid rgba(255, 255, 255, 0.2);
+  position: relative;
+}
+
+.resume .resume-subitem h4 {
+  /*display: inline-block;*/
+  line-height: 16px;
+  font-size: 16px;
+  font-weight: 400;
+  text-transform: none;
+  font-family: "Poppins", sans-serif;
+  color: #18d26e;
+  margin-bottom: 5px;
+}
+
+.resume .resume-subitem h5 {
+  /* display: inline-block; */
+  font-size: 12px;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 5px 5px;
+  display: inline-block;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.resume .resume-subitem ul {
+  padding-left: 20px;
+}
+
+.resume .resume-subitem ul li {
+  padding-bottom: 10px;
+}
+
+.resume .resume-subitem:last-child {
+  padding-bottom: 0;
+}
+
+.resume .resume-subitem::before {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 25px;
+    left: -5px;
+    top: 4px;
+    background: #18d26e;
+    border: 1px solid #18d26e;
+}
+
+.resume .icon-box {
+    display: flex;
+    align-items: left;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.08);
+    transition: ease-in-out 0.3s;
+  }
+
+  .resume .icon-box i {
+    font-size: 15px;
+    padding-right: 10px;
+    line-height: 1;
+  }
+
+  .resume .icon-box h3 {
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    font-size: 14px;
+    color: #fff;
+  }
+
+  .resume .icon-box:hover {
+    background: rgba(255, 255, 255, 0.12);
+  }
 /*--------------------------------------------------------------
 # Services
 --------------------------------------------------------------*/
