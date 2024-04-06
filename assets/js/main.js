@@ -189,23 +189,23 @@
    * Porfolio isotope and filter
    */
   window.addEventListener('load', () => {
-    let portfolioContainer = select('.portfolio-container');
-    if (portfolioContainer) {
-      let portfolioIsotope = new Isotope(portfolioContainer, {
-        itemSelector: '.portfolio-item',
+    let writingContainer = select('.writing-container');
+    if (writingContainer) {
+      let writingIsotope = new Isotope(writingContainer, {
+        itemSelector: '.writing-item',
         layoutMode: 'fitRows'
       });
 
-      let portfolioFilters = select('#portfolio-flters li', true);
+      let writingFilters = select('#writing-filters li', true);
 
-      on('click', '#portfolio-flters li', function(e) {
+      on('click', '#writing-filters li', function(e) {
         e.preventDefault();
-        portfolioFilters.forEach(function(el) {
+        writingFilters.forEach(function(el) {
           el.classList.remove('filter-active');
         });
         this.classList.add('filter-active');
 
-        portfolioIsotope.arrange({
+        writingIsotope.arrange({
           filter: this.getAttribute('data-filter')
         });
       }, true);
@@ -214,25 +214,25 @@
   });
 
   /**
-   * Initiate portfolio lightbox 
+   * Initiate writing lightbox
    */
-  const portfolioLightbox = GLightbox({
-    selector: '.portfolio-lightbox'
+  const writingLightbox = GLightbox({
+    selector: '.writing-lightbox'
   });
 
   /**
-   * Initiate portfolio details lightbox 
+   * Initiate writing details lightbox
    */
-  const portfolioDetailsLightbox = GLightbox({
-    selector: '.portfolio-details-lightbox',
+  const writingDetailsLightbox = GLightbox({
+    selector: '.writing-details-lightbox',
     width: '90%',
     height: '90vh'
   });
 
   /**
-   * Portfolio details slider
+   * writing details slider
    */
-  new Swiper('.portfolio-details-slider', {
+  new Swiper('.writing-details-slider', {
     speed: 400,
     loop: true,
     autoplay: {
@@ -247,7 +247,7 @@
   });
 
   /**
-   * Initiate Pure Counter 
+   * Initiate Pure Counter
    */
   new PureCounter();
 
