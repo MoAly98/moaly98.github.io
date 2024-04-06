@@ -778,7 +778,7 @@ section .container {
     height: 8px;
     border-radius: 25px;
     left: -5px;
-    top: 8px;
+    top: 8px; /* Halfway through h4 height */
     background: #18d26e;
     border: 1px solid #18d26e;
 }
