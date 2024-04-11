@@ -1,5 +1,17 @@
 <!DOCTYPE html>
 <html lang="en-GB">
+  <style>
+    .filterDiv {
+      float: left;
+  display: none;
+    }
+    
+    .show {
+      display: block;
+    }
+
+
+    </style>
 
 <head>
   <meta charset="utf-8">
@@ -723,9 +735,17 @@
         <h2>Writing</h2>
         <p> Things I learned </p>
       </div>
+      <div id="myBtnContainer">
+        <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+        <button class="btn" onclick="filterSelection('python')"> python</button>
+        <button class="btn" onclick="filterSelection('C++')"> C++</button>
+        <button class="btn" onclick="filterSelection('HTML')"> HTML</button>
+        <button class="btn" onclick="filterSelection('Statistics')"> Statistics</button>
+      </div>
+
 
       <div class="row">
-        <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+        <div class="col-lg-3 col-md-6 align-items-stretch filterDiv python">
           <div class="icon-box">
             <div class="icon"><i class="bx bx-bar-chart-square"></i></div>
             <h4><a href="assets/html/thbb/index.html#thbb">  Python Lesson 1 </a></h4>
@@ -733,16 +753,23 @@
           </div>
         </div>
 
-        <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+        <div class="col-lg-3 col-md-6 align-items-stretch filterDiv C++">
             <div class="icon-box">
               <div class="icon"><i class="bx bx-bar-chart-square"></i></div>
               <h4><a href="assets/html/thbb/index.html#thbb">  C++ Lesson 1 </a></h4>
               <p> I learned this thing and that thing when i ran C++ </p>
             </div>
           </div>
+          <div class="col-lg-3 col-md-6 align-items-stretch filterDiv C++">
+            <div class="icon-box">
+              <div class="icon"><i class="bx bx-bar-chart-square"></i></div>
+              <h4><a href="assets/html/thbb/index.html#thbb">  C++ Lesson 2 </a></h4>
+              <p> I learned this thing and that thing when i ran C++ </p>
+            </div>
+          </div>
 
 
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+          <div class="col-lg-3 col-md-6 align-items-stretch filterDiv HTML">
             <div class="icon-box">
               <div class="icon"><i class="bx bx-bar-chart-square"></i></div>
               <h4><a href="assets/html/thbb/index.html#thbb">  HTML Lesson 1 </a></h4>
@@ -750,15 +777,56 @@
             </div>
           </div>
 
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+          <div class="col-lg-3 col-md-6 align-items-stretch filterDiv HTML">
+            <div class="icon-box">
+              <div class="icon"><i class="bx bx-bar-chart-square"></i></div>
+              <h4><a href="assets/html/thbb/index.html#thbb">  HTML Lesson 2 </a></h4>
+              <p> I learned this thing and that thing when i ran HTML </p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 align-items-stretch filterDiv HTML">
+            <div class="icon-box">
+              <div class="icon"><i class="bx bx-bar-chart-square"></i></div>
+              <h4><a href="assets/html/thbb/index.html#thbb">  HTML Lesson 3 </a></h4>
+              <p> I learned this thing and that thing when i ran HTML </p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 align-items-stretch filterDiv HTML">
+            <div class="icon-box">
+              <div class="icon"><i class="bx bx-bar-chart-square"></i></div>
+              <h4><a href="assets/html/thbb/index.html#thbb">  HTML Lesson 4 </a></h4>
+              <p> I learned this thing and that thing when i ran HTML </p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 align-items-stretch filterDiv Statistics">
             <div class="icon-box">
               <div class="icon"><i class="bx bx-bar-chart-square"></i></div>
               <h4><a href="assets/html/thbb/index.html#thbb">  Statistics Lesson 1 </a></h4>
               <p> I learned this thing and that thing when i ran Statistics </p>
             </div>
           </div>
+          <div class="col-lg-3 col-md-6 align-items-stretch filterDiv Statistics">
+            <div class="icon-box">
+              <div class="icon"><i class="bx bx-bar-chart-square"></i></div>
+              <h4><a href="assets/html/thbb/index.html#thbb">  Statistics Lesson 2 </a></h4>
+              <p> I learned this thing and that thing when i ran Statistics </p>
+            </div>
+          </div>
 
-      </div>
+          <div class="col-lg-3 col-md-6 align-items-stretch filterDiv HTML">
+            <div class="icon-box">
+              <div class="icon"><i class="bx bx-bar-chart-square"></i></div>
+              <h4><a href="assets/html/thbb/index.html#thbb">  HTML Lesson 5 </a></h4>
+              <p> I learned this thing and that thing when i ran HTML </p>
+            </div>
+          </div>
+
+      
+
+        </div>
 
     </div>
   </section><!-- End writing Section -->
@@ -778,6 +846,50 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script>
+    filterSelection("all")
+    function filterSelection(c) {
+      var x, i;
+      x = document.getElementsByClassName("filterDiv");
+      if (c == "all") c = "";
+      for (i = 0; i < x.length; i++) {
+        w3RemoveClass(x[i], "show");
+        if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+      }
+    }
+    
+    function w3AddClass(element, name) {
+      var i, arr1, arr2;
+      arr1 = element.className.split(" ");
+      arr2 = name.split(" ");
+      for (i = 0; i < arr2.length; i++) {
+        if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+      }
+    }
+    
+    function w3RemoveClass(element, name) {
+      var i, arr1, arr2;
+      arr1 = element.className.split(" ");
+      arr2 = name.split(" ");
+      for (i = 0; i < arr2.length; i++) {
+        while (arr1.indexOf(arr2[i]) > -1) {
+          arr1.splice(arr1.indexOf(arr2[i]), 1);     
+        }
+      }
+      element.className = arr1.join(" ");
+    }
+    
+    // Add active class to the current button (highlight it)
+    var btnContainer = document.getElementById("myBtnContainer");
+    var btns = btnContainer.getElementsByClassName("btn");
+    for (var i = 0; i < btns.length; i++) {
+      btns[i].addEventListener("click", function(){
+        var current = document.getElementsByClassName("active");
+        current[0].className = current[0].className.replace(" active", "");
+        this.className += " active";
+      });
+    }
+    </script>    
 
 </body>
 

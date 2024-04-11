@@ -159,30 +159,30 @@
   /**
    * Porfolio isotope and filter
    */
-  window.addEventListener('load', () => {
-    let writingContainer = select('.writing-container');
-    if (writingContainer) {
-      let writingIsotope = new Isotope(writingContainer, {
-        itemSelector: '.writing-item',
-        layoutMode: 'fitRows'
-      });
+  // window.addEventListener('load', () => {
+  //   let writingContainer = select('.writing-container');
+  //   if (writingContainer) {
+  //     let writingIsotope = new Isotope(writingContainer, {
+  //       itemSelector: '.writing-item',
+  //       layoutMode: 'fitRows'
+  //     });
 
-      let writingFilters = select('#writing-filters li', true);
+  //     let writingFilters = select('#writing-filters li', true);
 
-      on('click', '#writing-filters li', function(e) {
-        e.preventDefault();
-        writingFilters.forEach(function(el) {
-          el.classList.remove('filter-active');
-        });
-        this.classList.add('filter-active');
+  //     on('click', '#writing-filters li', function(e) {
+  //       e.preventDefault();
+  //       writingFilters.forEach(function(el) {
+  //         el.classList.remove('filter-active');
+  //       });
+  //       this.classList.add('filter-active');
 
-        writingIsotope.arrange({
-          filter: this.getAttribute('data-filter')
-        });
-      }, true);
-    }
+  //       writingIsotope.arrange({
+  //         filter: this.getAttribute('data-filter')
+  //       });
+  //     }, true);
+  //   }
 
-  });
+  // });
 
   /**
    * Initiate writing lightbox
