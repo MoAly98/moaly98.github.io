@@ -25,7 +25,7 @@ body::before {
   left: 0;
   right: 0;
   top: 0;
-  opacity: 0.9;
+  opacity: 0.9005;
   height: 100vh;
   z-index: -1;
 }
@@ -847,6 +847,8 @@ section .container {
   background: rgba(204, 204, 204, 0.1);
   padding: 80px 20px;
   transition: all ease-in-out 0.3s;
+  height: 100%; 
+  border-bottom: 20px solid #040404;
 }
 
 .writing .icon-box .icon {
@@ -885,6 +887,7 @@ section .container {
   font-weight: 700;
   margin-bottom: 15px;
   font-size: 24px;
+  height: 60px;
 }
 
 .writing .icon-box h4 a {
@@ -895,11 +898,16 @@ section .container {
   line-height: 24px;
   font-size: 14px;
   margin-bottom: 0;
+  padding-left: 2px;
+  padding-right: 2px;
+  word-wrap: break-word;
+  
 }
 
 .writing .icon-box:hover {
   background: #18d26e;
   border-color: #18d26e;
+  border-bottom: 20px solid #040404;
 }
 
 .writing .icon-box:hover .icon {
@@ -917,6 +925,16 @@ section .container {
 .writing .icon-box:hover h4 a,
 .writing .icon-box:hover p {
   color: #fff;
+}
+
+.filterDiv {
+  float: left;
+display: none;
+border-bottom: 5px black;
+}
+
+.show {
+  display: block;
 }
 
 
@@ -1108,4 +1126,28 @@ section .container {
 
 .credits a:hover {
   color: #fff;
+}
+button{
+  padding: 6px;
+  background-color: #040404;
+  border: #040404;
+  color: white;
+}
+button:hover {
+  box-shadow: 0 2px 0 0 #35e888, 0 17px 50px 0 rgba(0,0,0,0.19);
+  transition-duration: 0.4s;
+}
+button:focus
+{
+  box-shadow: 0 2px 0 0 #35e888, 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+#more {display: none;}
+.showButton
+{
+  background:rgba(204, 204, 204, 0);
+}
+.showButton:hover
+{
+  background-color:rgba(252, 186, 3, 0);
+  border:rgba(252, 186, 3, 0);
 }

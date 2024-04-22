@@ -723,17 +723,26 @@
         <h2>Writing</h2>
         <p> Things I learned </p>
       </div>
+      <div id="myBtnContainer">
+        <button class="btnNouran active" onclick="filterSelection('all')"> Show all</button>
+        <button onclick="filterSelection('python')"> python</button>
+        <button onclick="filterSelection('C++')"> C++</button>
+        <button onclick="filterSelection('HTML')"> HTML</button>
+        <button onclick="filterSelection('Statistics')"> Statistics</button>
+      </div>
+      <br>
+
 
       <div class="row">
-        <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+        <div class="col-lg-3 col-md-6 align-items-stretch filterDiv python">
           <div class="icon-box">
             <div class="icon"><i class="bx bx-bar-chart-square"></i></div>
             <h4><a href="assets/html/thbb/index.html#thbb">  Python Lesson 1 </a></h4>
-            <p> I learned this thing and that thing when i ran python </p>
+            <p> I learned this thing and that thing when i ran python I learned this thing <span id="dots">...</span><span id="more"> and that thing when i ran python I learned this thing and that thing when i ran python I learned this thing and that thing when i ran python  biugi hugv bh ug b uhvj hj vihj j ihj ihj iuh h kvkh b vyuhj khv hjn hkg khmjhuvj khb ljh hjnbv jhn gjkbv jh gjhb nyvhjb nhvjb nvjkb uvhgkjb tcukg hvmn I learned this thing and that thing when i ran python I learned this thing and that thing when i ran python I learned this thing and that thing when i ran python I learned this thing and that thing when i ran python  biugi hugv bh ug b uhvj hj vihj j ihj ihj iuh h kvkh b vyuhj khv hjn hkg khmjhuvj khb ljh hjnbv jhn gjkbv jh gjhb nyvhjb nhvjb nvjkb uvhgkjb tcukg hvmn</span> <button class="showButton" onclick="readMoreFunction()" id="myBtn">Read more</button></p>
           </div>
         </div>
 
-        <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+        <div class="col-lg-3 col-md-6 align-items-stretch filterDiv C++">
             <div class="icon-box">
               <div class="icon"><i class="bx bx-bar-chart-square"></i></div>
               <h4><a href="assets/html/thbb/index.html#thbb">  C++ Lesson 1 </a></h4>
@@ -741,8 +750,15 @@
             </div>
           </div>
 
+          <div class="col-lg-3 col-md-6 align-items-stretch filterDiv C++">
+            <div class="icon-box">
+              <div class="icon"><i class="bx bx-bar-chart-square"></i></div>
+              <h4><a href="assets/html/thbb/index.html#thbb">  C++ Lesson 2 </a></h4>
+              <p> I learned this thing and that thing when i ran C++ </p>
+            </div>
+          </div>
 
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+          <div class="col-lg-3 col-md-6 align-items-stretch filterDiv HTML">
             <div class="icon-box">
               <div class="icon"><i class="bx bx-bar-chart-square"></i></div>
               <h4><a href="assets/html/thbb/index.html#thbb">  HTML Lesson 1 </a></h4>
@@ -750,7 +766,31 @@
             </div>
           </div>
 
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+          <div class="col-lg-3 col-md-6 align-items-stretch filterDiv HTML">
+            <div class="icon-box">
+              <div class="icon"><i class="bx bx-bar-chart-square"></i></div>
+              <h4><a href="assets/html/thbb/index.html#thbb">  HTML Lesson 2 </a></h4>
+              <p> I learned this thing and that thing when i ran HTML </p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 align-items-stretch filterDiv HTML">
+            <div class="icon-box">
+              <div class="icon"><i class="bx bx-bar-chart-square"></i></div>
+              <h4><a href="assets/html/thbb/index.html#thbb">  HTML Lesson 3 </a></h4>
+              <p> I learned this thing and that thing when i ran HTML </p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 align-items-stretch filterDiv HTML">
+            <div class="icon-box">
+              <div class="icon"><i class="bx bx-bar-chart-square"></i></div>
+              <h4><a href="assets/html/thbb/index.html#thbb">  HTML Lesson 4 </a></h4>
+              <p> I learned this thing and that thing when i ran HTML </p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 align-items-stretch filterDiv Statistics">
             <div class="icon-box">
               <div class="icon"><i class="bx bx-bar-chart-square"></i></div>
               <h4><a href="assets/html/thbb/index.html#thbb">  Statistics Lesson 1 </a></h4>
@@ -758,7 +798,23 @@
             </div>
           </div>
 
-      </div>
+          <div class="col-lg-3 col-md-6 align-items-stretch filterDiv Statistics">
+            <div class="icon-box">
+              <div class="icon"><i class="bx bx-bar-chart-square"></i></div>
+              <h4><a href="assets/html/thbb/index.html#thbb">  Statistics Lesson 2 </a></h4>
+              <p> I learned this thing and that thing when i ran Statistics </p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 align-items-stretch filterDiv HTML">
+            <div class="icon-box">
+              <div class="icon"><i class="bx bx-bar-chart-square"></i></div>
+              <h4><a href="assets/html/thbb/index.html#thbb">  HTML Lesson 5 </a></h4>
+              <p> I learned this thing and that thing when i ran HTML </p>
+            </div>
+          </div>
+
+        </div>
 
     </div>
   </section><!-- End writing Section -->
@@ -777,7 +833,67 @@
   <script src="assets/vendor/php-email-form/validate.js"></script>
 
   <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
+  <script src="assets/js/main.js"></script>  
+  <script>
+    filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("filterDiv");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
+
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);     
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+function readMoreFunction() {
+  var dots = document.getElementById("dots");
+  var moreText = document.getElementById("more");
+  var btnText = document.getElementById("myBtn");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Read more";
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Read less";
+    moreText.style.display = "inline";
+    btnText.style.display="inline" 
+  }
+} 
+  </script>
 
 </body>
 
